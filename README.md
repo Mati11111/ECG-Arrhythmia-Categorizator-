@@ -1,3 +1,8 @@
+# Instalar librerias
+```
+pip install -r requirements.txt
+
+```
 # Modelos utilizados
 ## Modelo MLP
 Un modelo mlp es habitual para comenzar las pruebas.
