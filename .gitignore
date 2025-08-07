@@ -13,3 +13,5 @@ datos_generados_clase_3_total.csv
 datos_generados_clase_3.csv
 ecg_segmentado_187.csv
 ecg_sinteticos_clase3.npy
+mitbih_test.csv
+mitbih_train.csv
