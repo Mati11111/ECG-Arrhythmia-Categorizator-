@@ -1,5 +1,6 @@
 /imagenes_mitbih_test
 /imagenes_mitbih_train
+/newStart
 autoencoder_0.h5
 autoencoder_1.h5
 autoencoder_2.h5
@@ -18,3 +19,10 @@ mitbih_train.csv
 .env
 datos.json
 ecg_data_to_load.txt
+backend.zip
+cnn-imagenes copy.py
+cnn-imagenes-small copy.py
+cnn-imagenes-small-less-epochs copy.py
+mitbih_train.zip
+train_model_mlp copy.ipynb
+train_model_cnn copy.ipynb
