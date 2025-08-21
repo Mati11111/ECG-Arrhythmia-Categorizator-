@@ -26,3 +26,4 @@ cnn-imagenes-small-less-epochs copy.py
 mitbih_train.zip
 train_model_mlp copy.ipynb
 train_model_cnn copy.ipynb
+ecg_export9.csv
