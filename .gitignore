@@ -27,3 +27,7 @@ mitbih_train.zip
 train_model_mlp copy.ipynb
 train_model_cnn copy.ipynb
 ecg_export9.csv
+.venv
+cnn-imagenes-small-less-epochs.ipynb
+predict_disease-old.ipynb
+ecg_data_5.csv
