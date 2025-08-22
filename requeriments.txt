@@ -9,3 +9,5 @@ neurokit2==0.2.5
 scipy==1.10.1
 joblib==1.2.0
 imbalanced-learn==0.10.1
+cloudinary
+dotenv
