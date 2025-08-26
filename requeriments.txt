@@ -11,3 +11,6 @@ joblib==1.2.0
 imbalanced-learn==0.10.1
 cloudinary
 dotenv
+nbformat
+nbconvert
+gdown
