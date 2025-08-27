@@ -14,18 +14,29 @@ app.post('/', (req, res) => {
     console.log('Commit recibido:', commitMessage);
     
     if (commitMessage === "BACKEND MODIFIED --> URL CHANGED") {
-        // Fuerza actualización desde remoto, descartando cambios locales
-        const cmd = 'git fetch --all && git reset --hard origin/main';
+        const cmd = 'git fetch origin main && git checkout main && git reset --hard origin/main && git clean -fd';
         exec(cmd, { cwd: __dirname }, (error, stdout, stderr) => {
             if (error) {
-                console.error(`Error ejecutando git reset: ${error.message}`);
+                console.error(`Error ejecutando actualización: ${error.message}`);
                 return res.status(500).json({ error: error.message });
             }
             if (stderr) {
                 console.error(`stderr: ${stderr}`);
             }
             console.log(`stdout: ${stdout}`);
-            return res.json({ received: req.body, gitUpdate: stdout });
+            
+            exec('git rev-parse --short HEAD', { cwd: __dirname }, (err, commitHash) => {
+                if (err) {
+                    console.error(`Error obteniendo commit hash: ${err.message}`);
+                    return res.json({ received: req.body, gitUpdate: stdout });
+                }
+                console.log(`Repo actualizado al commit ${commitHash.trim()}`);
+                return res.json({ 
+                    received: req.body, 
+                    gitUpdate: stdout, 
+                    commit: commitHash.trim() 
+                });
+            });
         });
     } else {
         res.json({ received: req.body });
