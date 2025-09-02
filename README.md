@@ -5,7 +5,7 @@ pip install -r requirements.txt
 ```
 # Modelos utilizados
 ## Modelo MLP
-Un modelo mlp es habitual para comenzar las pruebas.
+Un modelo mlp es habitual para comenzar las pruebas
 ### Estructura
 En este caso se elabora un modelo que recibe las 187 variables de entrada y posee 5 clases de salida, las cuales representan cada una de las clases. Esta elaborado por 3 capas de 187, 128 y 64, respectivamente, generando un total de 32645 parámetros.
 <img width="907" height="927" alt="image" src="https://github.com/user-attachments/assets/dbd4f25a-640f-425f-80e0-e4bad0f68b3f" />
